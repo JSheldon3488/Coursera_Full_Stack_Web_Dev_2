@@ -33,7 +33,7 @@ class CommentForm extends Component {
         this.toggle();
     }
     
-    render() {
+    render() { 
         return(
             <div>
                 <button onClick={this.toggle} className="text-muted"><span className="fa fa-pencil"></span> Submit Comment</button>
