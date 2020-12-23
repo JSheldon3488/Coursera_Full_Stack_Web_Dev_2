@@ -108,11 +108,12 @@ function RenderDish({dish}) {
 
 function RenderComments({comments, postComment, dishId}) {
     if (comments != null) {
-        const data = <Stagger in> 
+        const data = 
+        <Stagger in> 
             {comments.map((comment) => {
                 return (
                     <Fade in>
-                    <li>
+                    <li key={comment.id}>
                         <p>{comment.comment}</p>
                         <p>-- {comment.author}, 
                         {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
